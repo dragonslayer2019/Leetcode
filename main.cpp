@@ -1,14 +1,11 @@
 #include "Solution\TwoSum.h"
+#include "Test\TwoSum.h"
+TestSmaple t;
+int main() {
+    TwoSum solution;
+    testTwoSum test1(t);
+    test1.Test(solution);
 
-int main()
-{
-    TwoSum::Solution solution;
-    vector<int> nums = {2,7,11,15};
-    int target = 9;
-    vector<int> res = solution.twoSum(nums, target);
-    for (auto x : res) {
-        cout << x << endl;
-    }
 }
 
  
