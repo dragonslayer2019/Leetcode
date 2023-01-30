@@ -9,14 +9,13 @@
  Output: [0,1]
  Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 */
-#include <iostream>
-#include <vector>
-#include <map>
+#pragma once
 
-namespace TwoSum{
-class Solution {
+#include "SolutionBase.h"
+
+class TwoSum : public SolutionBase {
 public:
-    std::vector<int> twoSum(std::vector<int>& nums, int target) {
+    virtual std::vector<int> solution(std::vector<int>& nums, int target) {
         std::map<int, int> m;
         for (int i = 0;i < nums.size();i++) {
             auto it = m.find(target - nums[i]);
@@ -28,4 +27,3 @@ public:
         return {};
     }  
 };
-}
