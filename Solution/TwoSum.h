@@ -13,15 +13,26 @@
 
 class TwoSum : public SolutionBase {
 public:
-    virtual std::vector<int> solution(std::vector<int>& nums, int target) {
+    TwoSum() = default;
+
+    virtual void solution() {
+        twosum(_nums, _target);
+    };
+
+    std::vector<int> twosum(std::vector<int>& nums, int target) {
         std::map<int, int> m;
         for (int i = 0;i < nums.size();i++) {
             auto it = m.find(target - nums[i]);
             if (it != m.end()) {
+                std::cout << it->second << " " << i;
                 return {it->second, i};
             }
             m[nums[i]] = i;
         }
+        std::cout << "not find";
         return {};
-    }  
+    }
+private:
+    std::vector<int> _nums = {1,3,5};
+    int _target=4;
 };

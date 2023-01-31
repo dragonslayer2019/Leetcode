@@ -7,7 +7,7 @@
 class SolutionBase {
 public:
     SolutionBase() = default;
-    virtual std::vector<int> solution(std::vector<int>& nums, int target);
-    ~SolutionBase() = default;
+    virtual void solution() {};
+    virtual ~SolutionBase() {};
 };
 #endif
