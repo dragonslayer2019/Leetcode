@@ -6,6 +6,6 @@ void Test(SolutionBase& solution) {
 }
 
 int main() {
-    TwoSum solution;
+    TwoSum solution({1,3,4},4);
     Test(solution);
 }

@@ -14,7 +14,8 @@
 class TwoSum : public SolutionBase {
 public:
     TwoSum() = default;
-
+    TwoSum(std::vector<int> vec, int num):_nums(vec), _target(num){}
+    
     virtual void solution() {
         twosum(_nums, _target);
     };
@@ -33,6 +34,6 @@ public:
         return {};
     }
 private:
-    std::vector<int> _nums = {1,3,5};
-    int _target=4;
+    std::vector<int> _nums;
+    int _target;
 };
