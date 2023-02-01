@@ -7,7 +7,7 @@
 class SolutionBase {
 public:
     SolutionBase() = default;
-    virtual void solution() {};
+    virtual void solution() = 0;
     virtual ~SolutionBase() {};
 };
 #endif
